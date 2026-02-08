@@ -1,0 +1,46 @@
+2026-02-08 13:08:57,481 - model_evl - INFO - Starting model evaluation process
+2026-02-08 13:08:57,482 - model_evl - INFO - Model loading started
+2026-02-08 13:08:57,632 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 13:08:57,632 - model_evl - INFO - Data loading started
+2026-02-08 13:08:57,839 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 13:08:57,846 - model_evl - INFO - Model evaluation started
+2026-02-08 13:08:57,906 - model_evl - INFO - Accuracy: 0.6579
+2026-02-08 13:08:57,906 - model_evl - INFO - Precision: 0.7351
+2026-02-08 13:08:57,906 - model_evl - INFO - Recall: 0.6579
+2026-02-08 13:08:57,907 - model_evl - DEBUG - Classification Report:
+2026-02-08 13:08:57,913 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.01       652
+           1       0.65      0.99      0.78      3930
+           2       0.83      0.18      0.29      1808
+
+    accuracy                           0.66      6390
+   macro avg       0.83      0.39      0.36      6390
+weighted avg       0.74      0.66      0.56      6390
+
+2026-02-08 13:08:57,913 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 13:12:50,184 - model_evl - INFO - Starting model evaluation process
+2026-02-08 13:12:50,184 - model_evl - INFO - Model loading started
+2026-02-08 13:12:50,356 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 13:12:50,356 - model_evl - INFO - Data loading started
+2026-02-08 13:12:50,569 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 13:12:50,580 - model_evl - INFO - Model evaluation started
+2026-02-08 13:12:50,673 - model_evl - INFO - Accuracy: 0.6579
+2026-02-08 13:12:50,674 - model_evl - INFO - Precision: 0.7351
+2026-02-08 13:12:50,674 - model_evl - INFO - Recall: 0.6579
+2026-02-08 13:12:50,675 - model_evl - DEBUG - Classification Report:
+2026-02-08 13:12:50,708 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.01       652
+           1       0.65      0.99      0.78      3930
+           2       0.83      0.18      0.29      1808
+
+    accuracy                           0.66      6390
+   macro avg       0.83      0.39      0.36      6390
+weighted avg       0.74      0.66      0.56      6390
+
+2026-02-08 13:12:50,708 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 13:12:50,711 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 13:12:50,711 - model_evl - INFO - Model evaluation completed successfully

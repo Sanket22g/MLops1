@@ -1,0 +1,15 @@
+2026-02-08 12:16:50,173 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 12:16:50,209 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 12:16:50,209 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 500
+2026-02-08 12:16:50,227 - feature_engineering - ERROR - Error during TF-IDF vectorization. Error: np.nan is an invalid document, expected byte or unicode string.
+2026-02-08 12:16:50,227 - feature_engineering - ERROR - Error in main function for feature engineering. Error: np.nan is an invalid document, expected byte or unicode string.
+2026-02-08 12:21:07,457 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 12:21:07,550 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 12:21:07,550 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 500
+2026-02-08 12:21:07,586 - feature_engineering - ERROR - Error during TF-IDF vectorization. Error: np.nan is an invalid document, expected byte or unicode string.
+2026-02-08 12:21:07,587 - feature_engineering - ERROR - Error in main function for feature engineering. Error: np.nan is an invalid document, expected byte or unicode string.
+2026-02-08 12:21:58,233 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 12:21:58,315 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 12:21:58,316 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 500
+2026-02-08 12:21:58,641 - feature_engineering - DEBUG - TF-IDF vectorization completed successfully. Shape of training data: (25558, 501), Shape of testing data: (6390, 501)
+2026-02-08 12:22:04,606 - feature_engineering - DEBUG - Vectorized training and testing data saved successfully to vectorized_data directory.

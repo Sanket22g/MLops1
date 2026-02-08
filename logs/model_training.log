@@ -1,0 +1,25 @@
+2026-02-08 12:38:36,228 - model_training - INFO - Loading training data
+2026-02-08 12:38:36,229 - model_training - INFO - Loading data from file: feature_engineered_data/train_data_fe.csv
+2026-02-08 12:38:36,230 - model_training - ERROR - Error during data loading from file: feature_engineered_data/train_data_fe.csv. Error: [Errno 2] No such file or directory: 'feature_engineered_data/train_data_fe.csv'
+2026-02-08 12:38:36,231 - model_training - ERROR - Error in main function for model training: [Errno 2] No such file or directory: 'feature_engineered_data/train_data_fe.csv'
+2026-02-08 12:39:42,128 - model_training - INFO - Loading training data
+2026-02-08 12:39:42,129 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 12:39:42,966 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 12:39:42,967 - model_training - INFO - Loading testing data
+2026-02-08 12:39:42,967 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 12:39:43,192 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 12:39:43,234 - model_training - INFO - Starting model training
+2026-02-08 12:39:45,497 - model_training - DEBUG - Model training completed successfully
+2026-02-08 12:39:45,497 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 12:39:45,498 - model_training - ERROR - Error saving the model: [Errno 2] No such file or directory: 'models/random_forest_model.joblib'
+2026-02-08 12:39:45,498 - model_training - ERROR - Error in main function for model training: [Errno 2] No such file or directory: 'models/random_forest_model.joblib'
+2026-02-08 12:40:03,505 - model_training - INFO - Loading training data
+2026-02-08 12:40:03,506 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 12:40:04,274 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 12:40:04,275 - model_training - INFO - Loading testing data
+2026-02-08 12:40:04,275 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 12:40:04,441 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 12:40:04,474 - model_training - INFO - Starting model training
+2026-02-08 12:40:06,848 - model_training - DEBUG - Model training completed successfully
+2026-02-08 12:40:06,848 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 12:40:06,910 - model_training - DEBUG - Model saved successfully

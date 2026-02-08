@@ -1,0 +1,76 @@
+2026-01-22 22:11:22,425 - data_injection - INFO - Data injection process started.
+2026-01-22 22:11:22,426 - data_injection - INFO - Starting data injection from URL: https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
+2026-01-22 22:11:44,725 - data_injection - DEBUG - Data injection completed successfully. Number of records: 31948 from https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv 
+2026-01-22 22:11:44,725 - data_injection - INFO - starting data preprocessing
+2026-01-22 22:11:44,730 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 31948
+2026-01-22 22:11:44,851 - data_injection - INFO - Training and testing data saved successfully to raw_data directory.
+2026-01-22 22:11:44,853 - data_injection - INFO - Data injection process completed successfully.
+2026-01-22 22:11:46,254 - data_injection - INFO - Data injection process started.
+2026-01-22 22:11:46,255 - data_injection - INFO - Starting data injection from URL: https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
+2026-01-22 22:11:54,801 - data_injection - DEBUG - Data injection completed successfully. Number of records: 31948 from https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv 
+2026-01-22 22:11:54,801 - data_injection - INFO - starting data preprocessing
+2026-01-22 22:11:54,805 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 31948
+2026-01-22 22:11:54,904 - data_injection - INFO - Training and testing data saved successfully to raw_data directory.
+2026-01-22 22:11:54,904 - data_injection - INFO - Data injection process completed successfully.
+2026-01-22 22:11:56,793 - data_injection - INFO - Data injection process started.
+2026-01-22 22:11:56,793 - data_injection - INFO - Starting data injection from URL: https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
+2026-01-22 22:12:14,286 - data_injection - DEBUG - Data injection completed successfully. Number of records: 31948 from https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv 
+2026-01-22 22:12:14,286 - data_injection - INFO - starting data preprocessing
+2026-01-22 22:12:14,288 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 31948
+2026-01-22 22:12:14,352 - data_injection - INFO - Training and testing data saved successfully to raw_data directory.
+2026-01-22 22:12:14,352 - data_injection - INFO - Data injection process completed successfully.
+2026-01-22 22:12:15,761 - data_injection - INFO - Data injection process started.
+2026-01-22 22:12:15,761 - data_injection - INFO - Starting data injection from URL: https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
+2026-01-22 22:12:33,869 - data_injection - DEBUG - Data injection completed successfully. Number of records: 31948 from https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv 
+2026-01-22 22:12:33,869 - data_injection - INFO - starting data preprocessing
+2026-01-22 22:12:33,873 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 31948
+2026-01-22 22:12:34,002 - data_injection - INFO - Training and testing data saved successfully to raw_data directory.
+2026-01-22 22:12:34,003 - data_injection - INFO - Data injection process completed successfully.
+2026-02-08 11:39:09,721 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:39:09,872 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:39:09,872 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:39:09,873 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:39:09,882 - data_injection - ERROR - Error during data preprocessing. Error: cannot access local variable 'text' where it is not associated with a value
+2026-02-08 11:39:09,883 - data_injection - ERROR - Error in main function for data preprocessing. Error: cannot access local variable 'text' where it is not associated with a value
+2026-02-08 11:40:40,418 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:40:40,524 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:40:40,524 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:40:40,525 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:40:40,529 - data_injection - ERROR - Error during data preprocessing. Error: cannot access local variable 'text' where it is not associated with a value
+2026-02-08 11:40:40,529 - data_injection - ERROR - Error in main function for data preprocessing. Error: cannot access local variable 'text' where it is not associated with a value
+2026-02-08 11:41:20,209 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:41:20,302 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:41:20,302 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:41:20,302 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:41:20,305 - data_injection - ERROR - Error during data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:41:20,305 - data_injection - ERROR - Error in main function for data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:42:13,136 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:42:13,298 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:42:13,298 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:42:13,299 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:42:13,307 - data_injection - ERROR - Error during data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:42:13,308 - data_injection - ERROR - Error in main function for data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:43:09,313 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:43:09,448 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:43:09,448 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:43:09,448 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:43:09,452 - data_injection - ERROR - Error during data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:43:09,452 - data_injection - ERROR - Error in main function for data preprocessing. Error: string indices must be integers, not 'str'
+2026-02-08 11:44:42,913 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 11:44:43,042 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 11:44:43,042 - data_injection - INFO - Preprocessing training data
+2026-02-08 11:44:43,043 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:45:36,342 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 25558
+2026-02-08 11:45:36,342 - data_injection - INFO - starting data preprocessing
+2026-02-08 11:45:48,108 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 6390
+2026-02-08 11:45:48,108 - data_injection - DEBUG - Data preprocessing completed for training and testing data. Train records after cleaning: 25558, Test records after cleaning: 6390
+2026-02-08 11:45:48,153 - data_injection - DEBUG - Cleaned training and testing data saved successfully to cleaned_data directory.
+2026-02-08 12:19:08,047 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 12:19:08,187 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 12:19:08,187 - data_injection - INFO - Preprocessing training data
+2026-02-08 12:19:08,188 - data_injection - INFO - starting data preprocessing
+2026-02-08 12:20:04,967 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 25558
+2026-02-08 12:20:04,967 - data_injection - INFO - starting data preprocessing
+2026-02-08 12:20:18,501 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 6390
+2026-02-08 12:20:18,501 - data_injection - DEBUG - Data preprocessing completed for training and testing data. Train records after cleaning: 25558, Test records after cleaning: 6390
+2026-02-08 12:20:18,556 - data_injection - DEBUG - Cleaned training and testing data saved successfully to cleaned_data directory.

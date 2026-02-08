@@ -1,4 +1,22 @@
-### AL ###
+### MLops Project ###
+cleaned_data/
+metrics/
+models/
+vectorized_data/
+raw_data/
+logs/
+
+### Python ###
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+### DVC ###
+.dvc/cache
+.dvc/tmp
+
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder
 .vscode/
