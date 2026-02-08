@@ -5,12 +5,12 @@ stages:
     deps:
     - path: raw_data/test_data.csv
       hash: md5
-      md5: 043388f36338db5f60aeeb2b37b6f1aa
-      size: 688565
+      md5: 1c1b36b6e95fb85626d486802d2a3ed2
+      size: 692864
     - path: raw_data/train_data.csv
       hash: md5
-      md5: c31f9b14f690b013883d473cac89a325
-      size: 2792576
+      md5: 37509df8c48cf3fd3c178b491d42e670
+      size: 2788277
     - path: src/pre_processing.py
       hash: md5
       md5: ba1bddaed78a185fa472f6a444494cb8
@@ -18,89 +18,130 @@ stages:
     outs:
     - path: cleaned_data/test_data_cleaned.csv
       hash: md5
-      md5: 1d5aa9af38d2b8f5f3bf756891ce5443
-      size: 407758
+      md5: 7f14bcda4d882979f2e2a37e9fd7914e
+      size: 409674
     - path: cleaned_data/train_data_cleaned.csv
       hash: md5
-      md5: b119cedcaef9b38e047cfa7c0a026ef5
-      size: 1648204
+      md5: 0ca54c0bb8e4539293fbce5bf1a94f0b
+      size: 1646288
   feature_engineering:
     cmd: python src/feature_engineering.py
     deps:
     - path: cleaned_data/test_data_cleaned.csv
       hash: md5
-      md5: 1d5aa9af38d2b8f5f3bf756891ce5443
-      size: 407758
+      md5: 7f14bcda4d882979f2e2a37e9fd7914e
+      size: 409674
     - path: cleaned_data/train_data_cleaned.csv
       hash: md5
-      md5: b119cedcaef9b38e047cfa7c0a026ef5
-      size: 1648204
+      md5: 0ca54c0bb8e4539293fbce5bf1a94f0b
+      size: 1646288
+    - path: params.yaml
+      hash: md5
+      md5: 121704fafa68774cee51751119105276
+      size: 548
     - path: src/feature_engineering.py
       hash: md5
-      md5: a455789e8255f7efdace921cf1e655cf
-      size: 4926
+      md5: 24c9b109b39d77b6182a2a9fe18e98dc
+      size: 5250
+    params:
+      params.yaml:
+        feature_engineering:
+          max_features: 501
+          text_column: text
+          target_column: label
     outs:
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: 67db13692f7cee67a6aa1167473a0dbe
-      size: 13356677
+      md5: c124376b03fa26eed6ac46e26bfedeac
+      size: 13386352
     - path: vectorized_data/x_train_tfidf.csv
       hash: md5
-      md5: 71f15ff82c4959940dd9e9016c689395
-      size: 53454686
+      md5: e8d39e905d988e1d49e6d9f375ef9f28
+      size: 53554123
   data_injection:
     cmd: python src/data_injection.py
     deps:
+    - path: params.yaml
+      hash: md5
+      md5: 121704fafa68774cee51751119105276
+      size: 548
     - path: src/data_injection.py
       hash: md5
-      md5: 214d564b49cc47a709bd8303a83d066d
-      size: 3672
+      md5: af3a373037c02b35542c9c62824a8557
+      size: 3877
+    params:
+      params.yaml:
+        data_injection:
+          test_size: 0.2
+          random_state: 43
+          url: 
+            https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
     outs:
     - path: raw_data/test_data.csv
       hash: md5
-      md5: 043388f36338db5f60aeeb2b37b6f1aa
-      size: 688565
+      md5: 1c1b36b6e95fb85626d486802d2a3ed2
+      size: 692864
     - path: raw_data/train_data.csv
       hash: md5
-      md5: c31f9b14f690b013883d473cac89a325
-      size: 2792576
+      md5: 37509df8c48cf3fd3c178b491d42e670
+      size: 2788277
   model_training:
     cmd: python src/model.py
     deps:
+    - path: params.yaml
+      hash: md5
+      md5: 121704fafa68774cee51751119105276
+      size: 548
     - path: src/model.py
       hash: md5
-      md5: 1da405520a3ca8a058ea23d98c631058
-      size: 3728
+      md5: bcdadf40d44c7688d2245af7c682b39f
+      size: 3787
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: 67db13692f7cee67a6aa1167473a0dbe
-      size: 13356677
+      md5: c124376b03fa26eed6ac46e26bfedeac
+      size: 13386352
     - path: vectorized_data/x_train_tfidf.csv
       hash: md5
-      md5: 71f15ff82c4959940dd9e9016c689395
-      size: 53454686
+      md5: e8d39e905d988e1d49e6d9f375ef9f28
+      size: 53554123
+    params:
+      params.yaml:
+        model_training:
+          n_estimators: 101
+          max_depth: 10
+          min_samples_split: 2
+          min_samples_leaf: 1
+          random_state: 43
     outs:
     - path: models/random_forest_model.joblib
       hash: md5
-      md5: 811bd32d4c506aff28fd0df8484331fb
-      size: 1823681
+      md5: 6260707d8a46aa2181a0cf7a296c0679
+      size: 1858865
   model_evaluation:
     cmd: python src/model_eval.py
     deps:
     - path: models/random_forest_model.joblib
       hash: md5
-      md5: 811bd32d4c506aff28fd0df8484331fb
-      size: 1823681
+      md5: 6260707d8a46aa2181a0cf7a296c0679
+      size: 1858865
+    - path: params.yaml
+      hash: md5
+      md5: 121704fafa68774cee51751119105276
+      size: 548
     - path: src/model_eval.py
       hash: md5
-      md5: 530809cedffeb628e852b3ff1c81b228
-      size: 4672
+      md5: 60e63a0d806d7778d54450264ebc0148
+      size: 4978
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: 67db13692f7cee67a6aa1167473a0dbe
-      size: 13356677
+      md5: c124376b03fa26eed6ac46e26bfedeac
+      size: 13386352
+    params:
+      params.yaml:
+        model_evaluation:
+          average: weighted
     outs:
     - path: metrics/evaluation_metrics.json
       hash: md5
-      md5: 11c6acd10334a7e3c5b3f18b642923b7
-      size: 536
+      md5: 5d56c7f86ece60bb1c4e68e7cdcc9d3a
+      size: 535

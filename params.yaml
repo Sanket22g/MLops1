@@ -1,23 +1,22 @@
 # Data Injection Parameters
 data_injection:
   test_size: 0.2
-  random_state: 42
+  random_state: 43
   url: "https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv"
 
 # Feature Engineering Parameters
 feature_engineering:
-  max_features: 500
+  max_features: 501
   text_column: "text"
   target_column: "label"
 
 # Model Training Parameters
 model_training:
-  n_estimators: 100
+  n_estimators: 101
   max_depth: 10
   min_samples_split: 2
   min_samples_leaf: 1
-  random_state: 42
-
+  random_state: 43
 # Model Evaluation Parameters
 model_evaluation:
   average: "weighted"
