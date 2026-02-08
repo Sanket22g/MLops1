@@ -23,3 +23,23 @@
 2026-02-08 12:40:06,848 - model_training - DEBUG - Model training completed successfully
 2026-02-08 12:40:06,848 - model_training - INFO - Saving model to models/random_forest_model.joblib
 2026-02-08 12:40:06,910 - model_training - DEBUG - Model saved successfully
+2026-02-08 13:51:37,066 - model_training - INFO - Loading training data
+2026-02-08 13:51:37,066 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 13:51:37,783 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 13:51:37,783 - model_training - INFO - Loading testing data
+2026-02-08 13:51:37,784 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 13:51:37,975 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 13:51:37,986 - model_training - INFO - Starting model training
+2026-02-08 13:51:40,705 - model_training - DEBUG - Model training completed successfully
+2026-02-08 13:51:40,705 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 13:51:40,733 - model_training - DEBUG - Model saved successfully
+2026-02-08 13:55:07,526 - model_training - INFO - Loading training data
+2026-02-08 13:55:07,526 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 13:55:08,755 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 13:55:08,755 - model_training - INFO - Loading testing data
+2026-02-08 13:55:08,755 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 13:55:09,054 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 13:55:09,129 - model_training - INFO - Starting model training
+2026-02-08 13:55:12,233 - model_training - DEBUG - Model training completed successfully
+2026-02-08 13:55:12,233 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 13:55:12,271 - model_training - DEBUG - Model saved successfully

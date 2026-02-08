@@ -74,3 +74,19 @@
 2026-02-08 12:20:18,501 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 6390
 2026-02-08 12:20:18,501 - data_injection - DEBUG - Data preprocessing completed for training and testing data. Train records after cleaning: 25558, Test records after cleaning: 6390
 2026-02-08 12:20:18,556 - data_injection - DEBUG - Cleaned training and testing data saved successfully to cleaned_data directory.
+2026-02-08 13:50:09,288 - data_injection - INFO - Starting main function for data preprocessing
+2026-02-08 13:50:09,346 - data_injection - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 13:50:09,346 - data_injection - INFO - Preprocessing training data
+2026-02-08 13:50:09,346 - data_injection - INFO - starting data preprocessing
+2026-02-08 13:51:09,696 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 25558
+2026-02-08 13:51:09,696 - data_injection - INFO - starting data preprocessing
+2026-02-08 13:51:20,934 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 6390
+2026-02-08 13:51:20,934 - data_injection - DEBUG - Data preprocessing completed for training and testing data. Train records after cleaning: 25558, Test records after cleaning: 6390
+2026-02-08 13:51:20,967 - data_injection - DEBUG - Cleaned training and testing data saved successfully to cleaned_data directory.
+2026-02-08 13:55:04,655 - data_injection - INFO - Data injection process started.
+2026-02-08 13:55:04,655 - data_injection - INFO - Starting data injection from URL: https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv
+2026-02-08 13:55:06,063 - data_injection - DEBUG - Data injection completed successfully. Number of records: 31948 from https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv 
+2026-02-08 13:55:06,063 - data_injection - INFO - starting data preprocessing
+2026-02-08 13:55:06,066 - data_injection - DEBUG - Data preprocessing completed successfully. Number of records after cleaning: 31948
+2026-02-08 13:55:06,129 - data_injection - INFO - Training and testing data saved successfully to raw_data directory.
+2026-02-08 13:55:06,130 - data_injection - INFO - Data injection process completed successfully.

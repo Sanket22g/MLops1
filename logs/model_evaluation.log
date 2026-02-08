@@ -44,3 +44,27 @@ weighted avg       0.74      0.66      0.56      6390
 2026-02-08 13:12:50,708 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
 2026-02-08 13:12:50,711 - model_evl - DEBUG - Metrics saved successfully
 2026-02-08 13:12:50,711 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 13:55:14,529 - model_evl - INFO - Starting model evaluation process
+2026-02-08 13:55:14,536 - model_evl - INFO - Model loading started
+2026-02-08 13:55:14,768 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 13:55:14,768 - model_evl - INFO - Data loading started
+2026-02-08 13:55:15,214 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 13:55:15,228 - model_evl - INFO - Model evaluation started
+2026-02-08 13:55:15,311 - model_evl - INFO - Accuracy: 0.6551
+2026-02-08 13:55:15,311 - model_evl - INFO - Precision: 0.7384
+2026-02-08 13:55:15,311 - model_evl - INFO - Recall: 0.6551
+2026-02-08 13:55:15,312 - model_evl - DEBUG - Classification Report:
+2026-02-08 13:55:15,325 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.01       652
+           1       0.64      0.99      0.78      3930
+           2       0.85      0.16      0.27      1808
+
+    accuracy                           0.66      6390
+   macro avg       0.83      0.39      0.35      6390
+weighted avg       0.74      0.66      0.56      6390
+
+2026-02-08 13:55:15,325 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 13:55:15,326 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 13:55:15,327 - model_evl - INFO - Model evaluation completed successfully
