@@ -2,6 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 import logging
 import os
 import pandas as pd
+import yaml
 
 logs_dir = "logs"
 os.makedirs(logs_dir, exist_ok=True)
@@ -88,6 +89,12 @@ def save_model(model: RandomForestClassifier, model_path: str) -> None:
 
 def main():
     try:
+        # Load parameters
+        with open('params.yaml', 'r') as f:
+            params = yaml.safe_load(f)
+        
+        model_params = params['model_training']
+        
         train_file_path = "vectorized_data/x_train_tfidf.csv"
         test_file_path = "vectorized_data/x_test_tfidf.csv"
         model_save_path = "models/random_forest_model.joblib"
@@ -102,12 +109,6 @@ def main():
 
         X_test = test_df.drop("label", axis=1)
         y_test = test_df["label"]
-
-        model_params = {
-            "n_estimators": 100,
-            "max_depth": 10,
-            "random_state": 42
-        }
 
         model = train_model(X_train, y_train, model_params)
 

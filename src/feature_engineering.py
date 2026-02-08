@@ -1,6 +1,7 @@
 import pandas as pd 
 import logging 
 import os
+import yaml
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 
@@ -91,12 +92,20 @@ def main():
 
     """
     try:
+        # Load parameters
+        with open('params.yaml', 'r') as f:
+            params = yaml.safe_load(f)
+        
+        feature_params = params['feature_engineering']
+        max_features = feature_params['max_features'] 
+        text_column = feature_params['text_column']
+        
         logger.info("Starting main function for feature engineering")
         train_df=pd.read_csv("cleaned_data/train_data_cleaned.csv")
         test_df=pd.read_csv("cleaned_data/test_data_cleaned.csv")
         logger.debug(f"Data loaded successfully. Train records: {len(train_df)}, Test records: {len(test_df)}")
 
-        x_train_df, x_test_df = apply_tfidf_vectorization(train_df, test_df, text_column="text", max_features=500)
+        x_train_df, x_test_df = apply_tfidf_vectorization(train_df, test_df, text_column=text_column, max_features=max_features)
 
         #store the vectorized data
         vectorized_data_dir = "vectorized_data"

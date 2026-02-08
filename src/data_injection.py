@@ -1,6 +1,7 @@
 import logging 
 import pandas as pd
-import os 
+import os
+import yaml
 from sklearn.model_selection import train_test_split
 
 logs_dir = "logs"
@@ -83,11 +84,21 @@ def save_data_to_csv(train_data: pd.DataFrame, test_data: pd.DataFrame, path:str
 
 def main():
     try:
+        # Load parameters
+        with open('params.yaml', 'r') as f:
+            params = yaml.safe_load(f)
+        
+        data_params = params['data_injection']
+        
         logger.info("Data injection process started.")
-        url = "https://raw.githubusercontent.com/Sanket22g/dataset/refs/heads/main/reddit_artist_posts_sentiment.csv"
+        url = data_params['url']
         df = data_save(url) 
         df_cleaned = preprocess_data(df)
-        train_data, test_data = train_test_split(df_cleaned, test_size=0.2, random_state=42)
+        train_data, test_data = train_test_split(
+            df_cleaned, 
+            test_size=data_params['test_size'], 
+            random_state=data_params['random_state']
+        )
         save_data_to_csv(train_data, test_data, path="raw_data")
         logger.info("Data injection process completed successfully.")
     except Exception as e:

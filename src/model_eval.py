@@ -4,6 +4,7 @@ import logging
 import os 
 import joblib
 import json
+import yaml
 logs_dir = "logs"
 os.makedirs(logs_dir, exist_ok=True)
 
@@ -58,21 +59,22 @@ def load_data(data_path:str):
         raise
 
 
-def evaluate_model(model, X_test, y_test):
+def evaluate_model(model, X_test, y_test, average='weighted'):
     """
     Evaluate the model and return metrics.
     
     :param model: Trained model
     :param X_test: Test features
     :param y_test: Test labels
+    :param average: Averaging strategy for precision and recall
     """
     try:
         logger.info("Model evaluation started")
         y_pred = model.predict(X_test)
         
         accuracy = accuracy_score(y_test, y_pred)
-        precision = precision_score(y_test, y_pred, average='weighted')
-        recall = recall_score(y_test, y_pred, average='weighted')
+        precision = precision_score(y_test, y_pred, average=average)
+        recall = recall_score(y_test, y_pred, average=average)
         
         logger.info(f"Accuracy: {accuracy:.4f}")
         logger.info(f"Precision: {precision:.4f}")
@@ -122,6 +124,12 @@ def main():
     Main function to evaluate the trained model.
     """
     try:
+        # Load parameters
+        with open('params.yaml', 'r') as f:
+            params = yaml.safe_load(f)
+        
+        eval_params = params['model_evaluation']
+        
         logger.info("Starting model evaluation process")
         
         # Load the trained model
@@ -137,7 +145,7 @@ def main():
         y_test = test_df["label"]
         
         # Evaluate the model
-        metrics = evaluate_model(model, X_test, y_test)
+        metrics = evaluate_model(model, X_test, y_test, average=eval_params['average'])
         
         # Save metrics to JSON file
         metrics_output_path = "metrics/evaluation_metrics.json"

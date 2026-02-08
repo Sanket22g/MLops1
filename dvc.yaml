@@ -3,6 +3,9 @@ stages:
     cmd: python src/data_injection.py
     deps:
       - src/data_injection.py
+      - params.yaml
+    params:
+      - data_injection
     outs:
       - raw_data/train_data.csv
       - raw_data/test_data.csv
@@ -23,6 +26,9 @@ stages:
       - src/feature_engineering.py
       - cleaned_data/train_data_cleaned.csv
       - cleaned_data/test_data_cleaned.csv
+      - params.yaml
+    params:
+      - feature_engineering
     outs:
       - vectorized_data/x_train_tfidf.csv
       - vectorized_data/x_test_tfidf.csv
@@ -33,6 +39,9 @@ stages:
       - src/model.py
       - vectorized_data/x_train_tfidf.csv
       - vectorized_data/x_test_tfidf.csv
+      - params.yaml
+    params:
+      - model_training
     outs:
       - models/random_forest_model.joblib
 
@@ -42,6 +51,9 @@ stages:
       - src/model_eval.py
       - models/random_forest_model.joblib
       - vectorized_data/x_test_tfidf.csv
+      - params.yaml
+    params:
+      - model_evaluation
     metrics:
       - metrics/evaluation_metrics.json:
           cache: false
