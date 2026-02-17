@@ -16,6 +16,7 @@ venv/
 ### DVC ###
 .dvc/cache
 .dvc/tmp
+dvclive/
 
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder

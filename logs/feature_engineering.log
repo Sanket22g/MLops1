@@ -18,3 +18,18 @@
 2026-02-08 13:51:23,777 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 500
 2026-02-08 13:51:24,432 - feature_engineering - DEBUG - TF-IDF vectorization completed successfully. Shape of training data: (25558, 501), Shape of testing data: (6390, 501)
 2026-02-08 13:51:33,939 - feature_engineering - DEBUG - Vectorized training and testing data saved successfully to vectorized_data directory.
+2026-02-08 15:07:30,517 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 15:07:30,600 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 15:07:30,600 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 500
+2026-02-08 15:07:31,285 - feature_engineering - DEBUG - TF-IDF vectorization completed successfully. Shape of training data: (25558, 501), Shape of testing data: (6390, 501)
+2026-02-08 15:07:40,943 - feature_engineering - DEBUG - Vectorized training and testing data saved successfully to vectorized_data directory.
+2026-02-08 15:12:58,451 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 15:12:58,516 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 15:12:58,516 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 501
+2026-02-08 15:12:58,970 - feature_engineering - DEBUG - TF-IDF vectorization completed successfully. Shape of training data: (25558, 502), Shape of testing data: (6390, 502)
+2026-02-08 15:13:07,394 - feature_engineering - DEBUG - Vectorized training and testing data saved successfully to vectorized_data directory.
+2026-02-08 15:38:10,268 - feature_engineering - INFO - Starting main function for feature engineering
+2026-02-08 15:38:10,326 - feature_engineering - DEBUG - Data loaded successfully. Train records: 25558, Test records: 6390
+2026-02-08 15:38:10,326 - feature_engineering - INFO - Applying TF-IDF vectorization to column: text with max_features: 1000
+2026-02-08 15:38:10,880 - feature_engineering - DEBUG - TF-IDF vectorization completed successfully. Shape of training data: (25558, 1001), Shape of testing data: (6390, 1001)
+2026-02-08 15:38:27,289 - feature_engineering - DEBUG - Vectorized training and testing data saved successfully to vectorized_data directory.

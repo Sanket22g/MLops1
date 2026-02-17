@@ -5,6 +5,7 @@ import os
 import joblib
 import json
 import yaml
+from dvclive import Live
 logs_dir = "logs"
 os.makedirs(logs_dir, exist_ok=True)
 
@@ -129,29 +130,43 @@ def main():
             params = yaml.safe_load(f)
         
         eval_params = params['model_evaluation']
+        model_params = params['model_training']
+        feature_params = params['feature_engineering']
         
         logger.info("Starting model evaluation process")
         
-        # Load the trained model
-        model_path = "models/random_forest_model.joblib"
-        model = load_model(model_path)
-        
-        # Load test data
-        test_data_path = "vectorized_data/x_test_tfidf.csv"
-        test_df = load_data(test_data_path)
-        
-        # Split features and labels
-        X_test = test_df.drop("label", axis=1)
-        y_test = test_df["label"]
-        
-        # Evaluate the model
-        metrics = evaluate_model(model, X_test, y_test, average=eval_params['average'])
-        
-        # Save metrics to JSON file
-        metrics_output_path = "metrics/evaluation_metrics.json"
-        save_metrics_to_json(metrics, metrics_output_path)
-        
-        logger.info("Model evaluation completed successfully")
+        # Initialize DVCLive for experiment tracking
+        with Live(save_dvc_exp=True) as live:
+            
+            # Log parameters from all stages
+            live.log_params(model_params)
+            live.log_param("max_features", feature_params['max_features'])
+            
+            # Load the trained model
+            model_path = "models/random_forest_model.joblib"
+            model = load_model(model_path)
+            
+            # Load test data
+            test_data_path = "vectorized_data/x_test_tfidf.csv"
+            test_df = load_data(test_data_path)
+            
+            # Split features and labels
+            X_test = test_df.drop("label", axis=1)
+            y_test = test_df["label"]
+            
+            # Evaluate the model
+            metrics = evaluate_model(model, X_test, y_test, average=eval_params['average'])
+            
+            # Log metrics with DVCLive
+            live.log_metric("accuracy", metrics['accuracy'])
+            live.log_metric("precision", metrics['precision'])
+            live.log_metric("recall", metrics['recall'])
+            
+            # Save metrics to JSON file
+            metrics_output_path = "metrics/evaluation_metrics.json"
+            save_metrics_to_json(metrics, metrics_output_path)
+            
+            logger.info("Model evaluation completed successfully")
         
     except Exception as e:
         logger.error(f"Error in main function for model evaluation. Error: {e}")

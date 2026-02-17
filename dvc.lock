@@ -37,8 +37,8 @@ stages:
       size: 1646288
     - path: params.yaml
       hash: md5
-      md5: 121704fafa68774cee51751119105276
-      size: 548
+      md5: 3ab523d6f3ab36f05296a54ddad500f4
+      size: 549
     - path: src/feature_engineering.py
       hash: md5
       md5: 24c9b109b39d77b6182a2a9fe18e98dc
@@ -46,25 +46,25 @@ stages:
     params:
       params.yaml:
         feature_engineering:
-          max_features: 501
+          max_features: 1000
           text_column: text
           target_column: label
     outs:
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: c124376b03fa26eed6ac46e26bfedeac
-      size: 13386352
+      md5: 029a02ae08b9fe0b110e298bd6877708
+      size: 26260912
     - path: vectorized_data/x_train_tfidf.csv
       hash: md5
-      md5: e8d39e905d988e1d49e6d9f375ef9f28
-      size: 53554123
+      md5: 273cc7e39e29517bd43473f0638457d3
+      size: 105051973
   data_injection:
     cmd: python src/data_injection.py
     deps:
     - path: params.yaml
       hash: md5
-      md5: 121704fafa68774cee51751119105276
-      size: 548
+      md5: 3ab523d6f3ab36f05296a54ddad500f4
+      size: 549
     - path: src/data_injection.py
       hash: md5
       md5: af3a373037c02b35542c9c62824a8557
@@ -90,52 +90,52 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 121704fafa68774cee51751119105276
-      size: 548
+      md5: 3ab523d6f3ab36f05296a54ddad500f4
+      size: 549
     - path: src/model.py
       hash: md5
       md5: bcdadf40d44c7688d2245af7c682b39f
       size: 3787
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: c124376b03fa26eed6ac46e26bfedeac
-      size: 13386352
+      md5: 029a02ae08b9fe0b110e298bd6877708
+      size: 26260912
     - path: vectorized_data/x_train_tfidf.csv
       hash: md5
-      md5: e8d39e905d988e1d49e6d9f375ef9f28
-      size: 53554123
+      md5: 273cc7e39e29517bd43473f0638457d3
+      size: 105051973
     params:
       params.yaml:
         model_training:
-          n_estimators: 101
-          max_depth: 10
+          n_estimators: 200
+          max_depth: 15
           min_samples_split: 2
           min_samples_leaf: 1
           random_state: 43
     outs:
     - path: models/random_forest_model.joblib
       hash: md5
-      md5: 6260707d8a46aa2181a0cf7a296c0679
-      size: 1858865
+      md5: d497814324ded530093d7d9aa1738658
+      size: 8069521
   model_evaluation:
     cmd: python src/model_eval.py
     deps:
     - path: models/random_forest_model.joblib
       hash: md5
-      md5: 6260707d8a46aa2181a0cf7a296c0679
-      size: 1858865
+      md5: d497814324ded530093d7d9aa1738658
+      size: 8069521
     - path: params.yaml
       hash: md5
-      md5: 121704fafa68774cee51751119105276
-      size: 548
+      md5: 3ab523d6f3ab36f05296a54ddad500f4
+      size: 549
     - path: src/model_eval.py
       hash: md5
-      md5: 60e63a0d806d7778d54450264ebc0148
-      size: 4978
+      md5: d8f9ca3c1b3d62fb7e89f0c8e06a77d4
+      size: 5721
     - path: vectorized_data/x_test_tfidf.csv
       hash: md5
-      md5: c124376b03fa26eed6ac46e26bfedeac
-      size: 13386352
+      md5: 029a02ae08b9fe0b110e298bd6877708
+      size: 26260912
     params:
       params.yaml:
         model_evaluation:
@@ -143,5 +143,5 @@ stages:
     outs:
     - path: metrics/evaluation_metrics.json
       hash: md5
-      md5: 5d56c7f86ece60bb1c4e68e7cdcc9d3a
-      size: 535
+      md5: 3855eda19dff54d25b4c9deafd3c1490
+      size: 536

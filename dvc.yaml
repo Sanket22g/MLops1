@@ -2,58 +2,65 @@ stages:
   data_injection:
     cmd: python src/data_injection.py
     deps:
-      - src/data_injection.py
-      - params.yaml
+    - src/data_injection.py
+    - params.yaml
     params:
-      - data_injection
+    - data_injection
     outs:
-      - raw_data/train_data.csv
-      - raw_data/test_data.csv
+    - raw_data/train_data.csv
+    - raw_data/test_data.csv
 
   data_preprocessing:
     cmd: python src/pre_processing.py
     deps:
-      - src/pre_processing.py
-      - raw_data/train_data.csv
-      - raw_data/test_data.csv
+    - src/pre_processing.py
+    - raw_data/train_data.csv
+    - raw_data/test_data.csv
     outs:
-      - cleaned_data/train_data_cleaned.csv
-      - cleaned_data/test_data_cleaned.csv
+    - cleaned_data/train_data_cleaned.csv
+    - cleaned_data/test_data_cleaned.csv
 
   feature_engineering:
     cmd: python src/feature_engineering.py
     deps:
-      - src/feature_engineering.py
-      - cleaned_data/train_data_cleaned.csv
-      - cleaned_data/test_data_cleaned.csv
-      - params.yaml
+    - src/feature_engineering.py
+    - cleaned_data/train_data_cleaned.csv
+    - cleaned_data/test_data_cleaned.csv
+    - params.yaml
     params:
-      - feature_engineering
+    - feature_engineering
     outs:
-      - vectorized_data/x_train_tfidf.csv
-      - vectorized_data/x_test_tfidf.csv
+    - vectorized_data/x_train_tfidf.csv
+    - vectorized_data/x_test_tfidf.csv
 
   model_training:
     cmd: python src/model.py
     deps:
-      - src/model.py
-      - vectorized_data/x_train_tfidf.csv
-      - vectorized_data/x_test_tfidf.csv
-      - params.yaml
+    - src/model.py
+    - vectorized_data/x_train_tfidf.csv
+    - vectorized_data/x_test_tfidf.csv
+    - params.yaml
     params:
-      - model_training
+    - model_training
     outs:
-      - models/random_forest_model.joblib
+    - models/random_forest_model.joblib
 
   model_evaluation:
     cmd: python src/model_eval.py
     deps:
-      - src/model_eval.py
-      - models/random_forest_model.joblib
-      - vectorized_data/x_test_tfidf.csv
-      - params.yaml
+    - src/model_eval.py
+    - models/random_forest_model.joblib
+    - vectorized_data/x_test_tfidf.csv
+    - params.yaml
     params:
-      - model_evaluation
+    - model_evaluation
     metrics:
-      - metrics/evaluation_metrics.json:
-          cache: false
+    - metrics/evaluation_metrics.json:
+        cache: false
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step

@@ -43,3 +43,33 @@
 2026-02-08 13:55:12,233 - model_training - DEBUG - Model training completed successfully
 2026-02-08 13:55:12,233 - model_training - INFO - Saving model to models/random_forest_model.joblib
 2026-02-08 13:55:12,271 - model_training - DEBUG - Model saved successfully
+2026-02-08 15:07:43,840 - model_training - INFO - Loading training data
+2026-02-08 15:07:43,840 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 15:07:44,879 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 15:07:44,879 - model_training - INFO - Loading testing data
+2026-02-08 15:07:44,879 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 15:07:45,165 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:07:45,236 - model_training - INFO - Starting model training
+2026-02-08 15:07:48,116 - model_training - DEBUG - Model training completed successfully
+2026-02-08 15:07:48,117 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 15:07:48,146 - model_training - DEBUG - Model saved successfully
+2026-02-08 15:13:10,166 - model_training - INFO - Loading training data
+2026-02-08 15:13:10,167 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 15:13:11,165 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 15:13:11,165 - model_training - INFO - Loading testing data
+2026-02-08 15:13:11,166 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 15:13:11,391 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:13:11,444 - model_training - INFO - Starting model training
+2026-02-08 15:13:14,384 - model_training - DEBUG - Model training completed successfully
+2026-02-08 15:13:14,385 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 15:13:14,409 - model_training - DEBUG - Model saved successfully
+2026-02-08 15:38:29,982 - model_training - INFO - Loading training data
+2026-02-08 15:38:29,983 - model_training - INFO - Loading data from file: vectorized_data/x_train_tfidf.csv
+2026-02-08 15:38:38,081 - model_training - DEBUG - Data loaded successfully. Number of records: 25558 from vectorized_data/x_train_tfidf.csv
+2026-02-08 15:38:38,082 - model_training - INFO - Loading testing data
+2026-02-08 15:38:38,083 - model_training - INFO - Loading data from file: vectorized_data/x_test_tfidf.csv
+2026-02-08 15:38:43,109 - model_training - DEBUG - Data loaded successfully. Number of records: 6390 from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:38:44,378 - model_training - INFO - Starting model training
+2026-02-08 15:39:18,832 - model_training - DEBUG - Model training completed successfully
+2026-02-08 15:39:18,834 - model_training - INFO - Saving model to models/random_forest_model.joblib
+2026-02-08 15:39:19,002 - model_training - DEBUG - Model saved successfully

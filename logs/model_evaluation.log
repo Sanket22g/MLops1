@@ -68,3 +68,99 @@ weighted avg       0.74      0.66      0.56      6390
 2026-02-08 13:55:15,325 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
 2026-02-08 13:55:15,326 - model_evl - DEBUG - Metrics saved successfully
 2026-02-08 13:55:15,327 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 15:07:50,570 - model_evl - INFO - Starting model evaluation process
+2026-02-08 15:07:50,571 - model_evl - INFO - Model loading started
+2026-02-08 15:07:50,766 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 15:07:50,767 - model_evl - INFO - Data loading started
+2026-02-08 15:07:51,097 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:07:51,109 - model_evl - INFO - Model evaluation started
+2026-02-08 15:07:51,187 - model_evl - INFO - Accuracy: 0.6579
+2026-02-08 15:07:51,188 - model_evl - INFO - Precision: 0.7351
+2026-02-08 15:07:51,188 - model_evl - INFO - Recall: 0.6579
+2026-02-08 15:07:51,188 - model_evl - DEBUG - Classification Report:
+2026-02-08 15:07:51,202 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       1.00      0.00      0.01       652
+           1       0.65      0.99      0.78      3930
+           2       0.83      0.18      0.29      1808
+
+    accuracy                           0.66      6390
+   macro avg       0.83      0.39      0.36      6390
+weighted avg       0.74      0.66      0.56      6390
+
+2026-02-08 15:07:51,202 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 15:07:51,204 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 15:07:51,204 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 15:13:16,694 - model_evl - INFO - Starting model evaluation process
+2026-02-08 15:13:16,694 - model_evl - INFO - Model loading started
+2026-02-08 15:13:16,966 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 15:13:16,966 - model_evl - INFO - Data loading started
+2026-02-08 15:13:17,295 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:13:17,306 - model_evl - INFO - Model evaluation started
+2026-02-08 15:13:17,379 - model_evl - INFO - Accuracy: 0.6491
+2026-02-08 15:13:17,380 - model_evl - INFO - Precision: 0.6238
+2026-02-08 15:13:17,380 - model_evl - INFO - Recall: 0.6491
+2026-02-08 15:13:17,380 - model_evl - DEBUG - Classification Report:
+2026-02-08 15:13:17,397 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       733
+           1       0.64      0.99      0.78      3891
+           2       0.85      0.17      0.28      1766
+
+    accuracy                           0.65      6390
+   macro avg       0.50      0.39      0.35      6390
+weighted avg       0.62      0.65      0.55      6390
+
+2026-02-08 15:13:17,397 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 15:13:17,399 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 15:13:17,399 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 15:36:58,482 - model_evl - INFO - Starting model evaluation process
+2026-02-08 15:36:59,106 - model_evl - INFO - Model loading started
+2026-02-08 15:36:59,430 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 15:36:59,430 - model_evl - INFO - Data loading started
+2026-02-08 15:36:59,680 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:36:59,693 - model_evl - INFO - Model evaluation started
+2026-02-08 15:36:59,766 - model_evl - INFO - Accuracy: 0.6491
+2026-02-08 15:36:59,766 - model_evl - INFO - Precision: 0.6238
+2026-02-08 15:36:59,766 - model_evl - INFO - Recall: 0.6491
+2026-02-08 15:36:59,767 - model_evl - DEBUG - Classification Report:
+2026-02-08 15:36:59,782 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00       733
+           1       0.64      0.99      0.78      3891
+           2       0.85      0.17      0.28      1766
+
+    accuracy                           0.65      6390
+   macro avg       0.50      0.39      0.35      6390
+weighted avg       0.62      0.65      0.55      6390
+
+2026-02-08 15:36:59,784 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 15:36:59,785 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 15:36:59,785 - model_evl - INFO - Model evaluation completed successfully
+2026-02-08 15:39:21,722 - model_evl - INFO - Starting model evaluation process
+2026-02-08 15:39:22,201 - model_evl - INFO - Model loading started
+2026-02-08 15:39:22,405 - model_evl - DEBUG - Model loaded successfully from models/random_forest_model.joblib
+2026-02-08 15:39:22,405 - model_evl - INFO - Data loading started
+2026-02-08 15:39:23,003 - model_evl - DEBUG - Data loaded successfully from vectorized_data/x_test_tfidf.csv
+2026-02-08 15:39:23,025 - model_evl - INFO - Model evaluation started
+2026-02-08 15:39:23,239 - model_evl - INFO - Accuracy: 0.6693
+2026-02-08 15:39:23,239 - model_evl - INFO - Precision: 0.7477
+2026-02-08 15:39:23,240 - model_evl - INFO - Recall: 0.6693
+2026-02-08 15:39:23,240 - model_evl - DEBUG - Classification Report:
+2026-02-08 15:39:23,258 - model_evl - DEBUG - 
+              precision    recall  f1-score   support
+
+           0       1.00      0.01      0.02       733
+           1       0.65      0.99      0.79      3891
+           2       0.85      0.25      0.38      1766
+
+    accuracy                           0.67      6390
+   macro avg       0.83      0.41      0.39      6390
+weighted avg       0.75      0.67      0.59      6390
+
+2026-02-08 15:39:23,261 - model_evl - INFO - Saving metrics to metrics/evaluation_metrics.json
+2026-02-08 15:39:23,262 - model_evl - DEBUG - Metrics saved successfully
+2026-02-08 15:39:23,262 - model_evl - INFO - Model evaluation completed successfully
